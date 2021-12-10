@@ -20,9 +20,30 @@ var generateString = function (size) {
         lg: 15,
         xlg: 20,
     };
-    return typeof size === "number"
-        ? lorem.generateSentences(size)
-        : lorem.generateSentences(sizePresets[size]);
+    var generatedString = null;
+    console.log(size);
+    if (typeof size === 'number') {
+        generatedString = lorem.generateWords(size);
+    }
+    else {
+        var category = size.slice(0, 1);
+        var quantity = Number(size.slice(1));
+        switch (category) {
+            case "w":
+                generatedString = lorem.generateWords(quantity);
+                break;
+            case "s":
+                generatedString = lorem.generateSentences(quantity);
+                break;
+            case "p":
+                generatedString = lorem.generateParagraphs(quantity);
+                break;
+            default:
+                generatedString = lorem.generateWords(Number(size));
+                break;
+        }
+    }
+    return generatedString;
 };
 exports.default = generateString;
 //# sourceMappingURL=generateString.js.map

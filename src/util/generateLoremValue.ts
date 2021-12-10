@@ -4,7 +4,7 @@ import generateNumber from "./generateNumber";
 const getValueOptions = (value: string) => {
 	let [valueType, valueOptions = "1*1"] = value.split("/");
 	let [size = 1, quantity = 1] = valueOptions.split("*");
-	return { valueType, size: Number(size), quantity: Number(quantity) };
+	return { valueType, size: size, quantity: Number(quantity) };
 };
 
 const generateLoremValue = (value: any): any => {

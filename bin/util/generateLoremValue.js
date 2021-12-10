@@ -8,7 +8,7 @@ var generateNumber_1 = __importDefault(require("./generateNumber"));
 var getValueOptions = function (value) {
     var _a = value.split("/"), valueType = _a[0], _b = _a[1], valueOptions = _b === void 0 ? "1*1" : _b;
     var _c = valueOptions.split("*"), _d = _c[0], size = _d === void 0 ? 1 : _d, _e = _c[1], quantity = _e === void 0 ? 1 : _e;
-    return { valueType: valueType, size: Number(size), quantity: Number(quantity) };
+    return { valueType: valueType, size: size, quantity: Number(quantity) };
 };
 var generateLoremValue = function (value) {
     if (Array.isArray(value)) {

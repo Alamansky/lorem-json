@@ -15,7 +15,7 @@ let validJsonString = kvArray
 		return quotedValue;
 	})
 	.join("");
-
+console.log(validJsonString);
 const parsedJson = JSON.parse(validJsonString);
 
 const expandedJson = walkObject(
