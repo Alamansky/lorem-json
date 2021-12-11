@@ -23,7 +23,6 @@ const generateString = (size: string | number = 1): any => {
 
 	let generatedString = null;
 
-	console.log(size);
 	if (typeof size === 'number') {
 		generatedString = lorem.generateWords(size);
 	} else {

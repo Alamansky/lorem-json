@@ -16,7 +16,6 @@ var validJsonString = kvArray
     return quotedValue;
 })
     .join("");
-console.log(validJsonString);
 var parsedJson = JSON.parse(validJsonString);
 var expandedJson = walkObject_1.default(function (value) { return generateLoremValue_1.default(value); }, parsedJson);
 console.log(JSON.stringify(expandedJson, null, 2));
